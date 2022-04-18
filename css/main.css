@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+    /*========== BASE ==========*/
+*{
+    box-sizing: border-box;
+}
+html{ 
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--font-primary);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+h1,h2,h3,h4,p,ol,ul,figure,dd{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+h1,h2,h3,h4{
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+
+:root{
+    --header-height: 3rem;
+        /*========== Z INDEX ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+
+        /*========== COLORS ==========*/
+    --first-color: rgb(255, 1, 79);
+    --first-color-alt: rgb(240, 25, 90);
+    --first-color-lighter: rgb(233, 71, 120);
+    --title-color: rgb(196, 207, 222);
+    --text-color: rgb(196, 207, 222);
+    --text-color-light: rgb(229, 235, 243);
+    --input-color: rgb(240, 238, 252);
+    --body-color: rgb(251, 251, 254);
+    --container-color: #fff;
+    --shadow-1: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    --shadow-2: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
+
+        /*========== FONT AND TYPOGRAPHY ==========*/
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+        /*========== Font Weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+}
+
+    /*========== Font size for large devices ==========*/
+    @media screen and (min-width: 968px) {
+        :root {
+            --big-font-size: 3rem;
+            --h1-font-size: 2.25rem;
+            --h2-font-size: 1.5rem;
+            --h3-font-size: 1.25rem;
+            --normal-font-size: 1rem;
+            --small-font-size: .875rem;
+            --smaller-font-size: .813rem;
+        }
+    }
+
+section{
+    padding: 2rem 0 4rem;
+}
+
+.section_title{
+    font-size: var(--h1-font-size);
+}
+
+.section_subtitle{
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: 3rem;
+}
+
+.section_title,
+.section_subtitle{
+    text-align: center;
+}
+
+    /*========== LAYOUT ==========*/
+.container{
+    max-width: 768px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
