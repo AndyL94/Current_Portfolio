@@ -50,7 +50,7 @@ h1,h2,h3,h4{
     --first-color-lighter: rgb(233, 177, 194);
     --title-color: rgb(122, 129, 139);
     --text-color: rgb(122, 129, 139);
-    --text-color-light: rgb(229, 235, 243);
+    --text-color-light: rgb(173, 181, 190);
     --input-color: rgb(240, 238, 252);
     --body-color: rgb(251, 251, 254);
     --container-color: #fff;
@@ -419,6 +419,156 @@ header{
 .skills_open .skills_arrow{
     transform: rotate(-180deg);
 }
+
+    /*============== Expérience ==============*/
+.experience_tabs{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.experience_button{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+}
+
+.experience_button:hover{
+    color: var(--first-color);
+}
+
+.experience_icon{
+    font-size: 1.8rem;
+    margin-right: 0.25rem;
+}
+
+.experience_data{
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+}
+
+.experience_title{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.experience_subtitle{
+    display: inline-block;
+    font-size: var(--small-font-size);
+    margin-bottom: 1rem;
+}
+
+.experience_calendar{
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+}
+
+.experience_rounder{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-color: var(--first-color);
+    border-radius: 50%;
+}
+
+.experience_line{
+    display: block;
+    width: 1px;
+    height: 100%;
+    border-color: var(--first-color);
+    transform: translate(6px, -7px);
+}
+
+.experience[data-content]{
+    display: none;
+}
+
+.experience_active[data-content]{
+    display: block;
+}
+
+.experience_button.experience_active{
+    color: var(--first-color);
+}
+
+    /*============== PROJET ==============*/
+.projet_container{
+    overflow: initial;
+}
+
+.portfolio_content{
+    padding: 0 1.5rem;
+}
+
+.portfolio_img{
+    width: 265px;
+    border-radius: .5rem;
+    justify-self: center;
+}
+
+.projet_title{
+    font-size: var(--h3-font-size);
+    margin-bottom: .5rem;
+}
+
+.projet_description{
+    margin-bottom: .75rem;
+}
+
+.projet_button:hover .button_icon{
+    transform: translateX(.25rem);
+}
+
+    /*============== CONTACT ==============*/
+.contact_container{
+    row-gap: 3rem;
+}
+
+.contact_info{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.contact_icon{
+    font-size: 2rem;
+    color: var(--first-color);
+    margin-right: .75rem;
+}
+
+.contact_title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+.contact_subtitle{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.contact_content{
+    border-color: var(--input-color);
+    border-radius: .5rem;
+    padding: .75rem 1rem .25rem;
+}
+
+.contact_label{
+    font-size: var(--smaller-font-size);
+    color: var(--title-color);
+}
+
+.contact_input{
+    width: 100%;
+    border-color: var(--input-color);
+    color: var(--text-color);
+    font-family: var(--font-secondary);
+    font-size: var(--normal-font-size);
+    border-radius: .5rem;
+    padding: .25rem .5rem .5rem 0;
+}
+
+
+
 
 
 

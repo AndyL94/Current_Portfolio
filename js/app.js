@@ -47,4 +47,24 @@ document.addEventListener("DOMContentLoaded", e => {
     skillsHeader.forEach(el => {
         el.addEventListener('click', toggleSkills);
     });
+
+    /*============== EXPERIENCE TABS ==============*/
+    const tabs = document.querySelectorAll('[data-target]'),
+          tabContents = document.querySelectorAll('[data-content]');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = document.querySelector(tab.dataset.target);
+
+            tabContents.forEach(tabContent => {
+                tabContent.classList.remove('experience_active');
+            });
+            target.classList.add('experience_active');
+
+            tabs.forEach(tab => {
+                tab.classList.remove('experience_active');
+            });
+            tab.classList.add('experience_active');
+        });
+    });
 });
