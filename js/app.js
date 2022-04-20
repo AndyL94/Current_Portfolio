@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", e => {
             });
             target.classList.add('experience_active');
 
-            tab.forEach(tab => {
+            tabs.forEach(tab => {
                 tab.classList.remove('experience_active');
             });
             tab.classList.add('experience_active');

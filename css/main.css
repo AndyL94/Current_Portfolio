@@ -56,8 +56,10 @@ h1,h2,h3,h4{
     --scrollbar: rgb(186, 186, 201);
     --scrollbar-thumb: rgb(199, 9, 66);
     --container-color: #fff;
-    --shadow-1: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    --shadow-1: 10px 10px 19px rgb(211, 211, 221), -10px -10px 19px rgb(210, 210, 223);
     --shadow-2: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
+    --background-color-1: linear-gradient(145deg, rgb(225, 225, 236), rgb(225, 225, 236));
+    --background-color-2: #212428;
 
         /*========== FONT AND TYPOGRAPHY ==========*/
     --font-primary: 'Poppins', sans-serif;
@@ -98,10 +100,14 @@ body.dark-theme{
     --text-color: rgb(122, 129, 139);
     --text-color-light: rgb(173, 181, 190);
     --input-color: rgb(240, 238, 252);
-    --body-color: rgb(30, 30, 36);
+    --body-color: rgb(33, 36, 40);
     --footer-bg: rgb(199, 9, 66);
     --scrollbar: rgb(30, 30, 36);
     --scrollbar-thumb: rgb(199, 9, 66);
+    --shadow-1: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    --shadow-2: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
+    --background-color-1: linear-gradient(145deg, #1e2024, #23272b);
+    --background-color-2: #212428;
 }
 
     /*============== Button Dark/Light ==============*/
@@ -120,7 +126,6 @@ body.dark-theme{
 .change-theme:hover{
     color: var(--first-color);
 }
-
 
 
 section{
@@ -147,6 +152,16 @@ section{
     max-width: 768px;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+}
+
+.skills_container,
+.experience_container,
+.projet_container,
+.contact_container{
+    background-color: var(--background-color-1);
+    border-radius: 2rem;
+    box-shadow: var(--shadow-1);
+    padding: 2rem;
 }
 
 .grid{
@@ -273,13 +288,21 @@ header{
 }
 
 .home_social-icon{
-    font-size: 1.25rem;
+    font-size: 25px;
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
     color: var(--first-color);
+    border-radius: 6px;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
 }
 
 .home_social-icon:hover{
     color: var(--first-color-alt);
 }
+
+
 
 .home_blob{
     width: 200px;
@@ -288,6 +311,15 @@ header{
 
 .home_blob-img{
     width: 180px;
+}
+
+.home_blob-img:hover{
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+#mask0{
+    mask-type: alpha;
 }
 
 .home_data{
@@ -455,11 +487,13 @@ header{
 
 .skills_close .skills_list{
     height: 0;
+    transition: .1s;
     overflow: hidden;
 }
 
 .skills_open .skills_list{
     height: max-content;
+    transition: .1s;
     margin-bottom: 2.5rem;
 }
 
@@ -544,15 +578,20 @@ header{
     overflow: initial;
 }
 
-.portfolio_content{
+.projet_content{
     padding: 0 1.5rem;
 }
 
-.portfolio_img{
+.projet_img{
     width: 265px;
-    border-radius: .5rem;
+    border-radius: 2rem;
     justify-self: center;
 }
+.projet_img:hover{
+    transform: scale(1.1);
+    transition: .4s;
+}
+
 
 .projet_title{
     font-size: var(--h3-font-size);
@@ -773,6 +812,7 @@ header{
     }
     .projet_img{
         margin: .5rem;
+        height: 320px;
     }
 }
 
@@ -880,9 +920,7 @@ header{
     .projet_content{
         column-gap: 5rem;
     }
-    .contact_form{
-        width: 460px;
-    }
+
     .contact_inputs{
         grid-template-columns: repeat(2, 1fr );
     }

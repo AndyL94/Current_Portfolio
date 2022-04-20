@@ -73,7 +73,7 @@
                     </div>
                     <div class="home_img">
                         <svg class="home_blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <mask id="mask0" mask-type="alpha">
+                            <mask id="mask0">
                                 <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
                                 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
                                 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
@@ -84,12 +84,12 @@
                                 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
                                 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                                 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                <image class="home_blob-img" x='11' y='5' xlink:href="asset/dev1.png">
+                                <image class="home_blob-img" width="180px" height="183.618px" x='11' y='5' xlink:href="asset/dev1.png"></image>
                             </g>
                         </svg>
                     </div>
                     <div class="home_data">
-                        <h1 class="home_title">Bonjour, je m'appelle Andy</h1>
+                        <h2 class="home_title">Bonjour, je m'appelle Andy</h2>
                         <h3 class="home_subtitle">Développeur Informatique</h3>
                         <p class="home_description">Étudiant suivant un BTS SIO (1ère année) axé sur le développement web et le développement d'Application mobile</p>
                         <a href="#contact" class="button button-flex">
@@ -117,7 +117,7 @@
                         <div class="skills_header">
                             <i class="fa-solid fa-code skills_icon"></i>
                             <div>
-                                <h1 class="skills_title">Frontend Developpeur</h1>
+                                <h2 class="skills_title">Frontend Developpeur</h2>
                             </div>
                             <i class="fa-solid fa-angle-down skills_arrow"></i>
                         </div>
@@ -159,7 +159,7 @@
                             <i class="fa-solid fa-server skills_icon"></i>
 
                             <div>
-                                <h1 class="skills_title">Backend Developpeur</h1>
+                                <h2 class="skills_title">Backend Developpeur</h2>
                             </div>
                             <i class="fa-solid fa-angle-down skills_arrow"></i>
                         </div>
@@ -339,12 +339,12 @@
                 <div>
                 <!-- ========= Projet 1 =========-->
                     <div class="projet_content grid">
-                        <img src="./asset/dev2.png" alt="" class="projet_img">
+                        <img src="./asset/streaming.png" alt="" class="projet_img">
 
                         <div class="projet_data">
                             <h3 class="projet_title">Site Streaming</h3>
-                            <p class="projet_description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quod facilis quas nisi</p>
-                            <a href="#" class="button button-flex button-small projet_button">Demo
+                            <p class="projet_description"> Bienvenue sur mon site Full Streaming, Un site ou vous pouvez trouver tous les films et séries en streaming.</p>
+                            <a href="http://andyl94.github.io/Projet_Streaming/" class="button button-flex button-small projet_button">Demo
                                 <i class="fa-solid fa-arrow-right button_icon"></i>
                             </a>
                         </div>
@@ -370,7 +370,7 @@
 
             <!-- =============== Contact ===============-->
         <section class="contact section" id="contact">
-            <h2 class="section_title">Contact Me</h2>
+            <h2 class="section_title">Contactez-moi</h2>
             <span class="section_subtitle"></span>
 
             <div class="contact_container container grid">
@@ -400,24 +400,24 @@
                     </div>
                 </div>
 
-                <form action="" class="contact_form grid">
+                <form class="contact_form grid">
                     <div class="contact_inputs grid">
                         <div class="contact_content">
-                            <label for="" class="contact_label">Name</label>
+                            <label class="contact_label">Name</label>
                             <input type="text" class="contact_input">
                         </div>
                         <div class="contact_content">
-                            <label for="" class="contact_label">Email</label>
+                            <label class="contact_label">Email</label>
                             <input type="email" class="contact_input">
                         </div>
                     </div>
                     <div class="contact_content">
-                        <label for="" class="contact_label">Projet</label>
+                        <label class="contact_label">Projet</label>
                         <input type="text" class="contact_input">
                     </div>
                     <div class="contact_content">
-                        <label for="" class="contact_label">Message</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact_input"></textarea>
+                        <label class="contact_label">Message</label>
+                        <textarea name="message" cols="1" rows="7" class="contact_input"></textarea>
                     </div>
 
                     <div>
@@ -429,7 +429,7 @@
             </div>
         </section>
             <!-- =============== Télécharger ===============-->
-        <section class="download section">
+        <div class="download section">
             <div class="download_container container grid">
                 <div class="download_buttons">
                     <a href="assets/CV.pdf" class="button button-flex">
@@ -437,7 +437,7 @@
                     </a>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
     <!-- ========================= FOOTER =========================-->
     <footer class="footer">
