@@ -21,7 +21,7 @@
             <div class="nav_menu" id="nav-menu">
                 <ul class="nav_list grid">
                     <li class="nav_item">
-                        <a href="#home" class="nav_link">
+                        <a href="#home" class="nav_link active-link">
                             <i class="fa-solid fa-house nav_icon"></i> Home
                         </a>
                     </li>
@@ -31,7 +31,7 @@
                         </a>
                     </li>
                     <li class="nav_item">
-                        <a href="#downloadme" class="nav_link">
+                        <a href="#experience" class="nav_link">
                             <i class="fa-solid fa-briefcase nav_icon"></i> Expériences
                         </a>
                     </li>
@@ -49,6 +49,8 @@
                 <i class="fa-solid fa-xmark nav_close" id="nav-close"></i>
             </div>
             <div class="nav_btns">
+                <!-- Theme change button -->
+                <i class="fa-solid fa-moon change-theme" id="theme-button"></i>
                 <div class="nav_toggle" id="nav-toggle">
                     <i class="fa-solid fa-bars"></i>
                 </div>
@@ -96,7 +98,7 @@
                     </div>
                 </div>
                 <div class="home_scroll">
-                    <a href="#download" class="home_scroll-button button-flex">
+                    <a href="#experience" class="home_scroll-button button-flex">
                         <i class="fa-solid fa-computer-mouse home_scroll-mouse"></i>
                         <span class="home_scroll-name">Défiler vers le bas</span>
                         <i class="fa-solid fa-arrow-down"></i>
@@ -204,22 +206,22 @@
             <div class="experience_container container">
                 <div class="experience_tabs">
                     <div class="experience_button button-flex experience_active" data-target="#education">
-                        <i class="fa-solid fa-graduation-cap experience_icon">Diplomes</i>
+                        <i class="fa-solid fa-graduation-cap experience_icon"> Diplomes</i>
                     </div>
                     <div class="experience_button button-flex" data-target="#work">
-                        <i class="fa-solid fa-briefcase nav_icon experience_icon">Experience Professionnelle</i>
+                        <i class="fa-solid fa-briefcase experience_icon"> Experiences</i>
                     </div>
                 </div>
                 <div class="experience_sections">
                                         <!-- ========= Expérience Content 1 =========-->
-                    <div class="experience_content" data-content id="education">
+                    <div class="experience_content experience_active" data-content id="education">
                         <!-- Exp 1 -->
                         <div class="experience_data">
                             <div>
                                 <h3 class="experience_title">BTS SIO</h3>
                                 <span class="experience_subtitle">ITIC Paris</span>
                                 <div class="experience_calendar">
-                                    <i class="fa-solid fa-calendar">2021 - 2023</i>
+                                    <i class="fa-solid fa-calendar"> 2021 - 2023</i>
                                 </div>
                             </div>
 
@@ -243,7 +245,7 @@
                                     Informatique </h3>
                                 <span class="experience_subtitle">IMIE Paris</span>
                                 <div class="experience_calendar">
-                                    <i class="fa-solid fa-calendar">2019</i>
+                                    <i class="fa-solid fa-calendar"> 2019</i>
                                 </div>
                             </div>
 
@@ -256,7 +258,7 @@
                                 <h3 class="experience_title">1ère année MASS (Mathématiques)</h3>
                                 <span class="experience_subtitle">Université Paris-Est Marne la Vallée</span>
                                 <div class="experience_calendar">
-                                    <i class="fa-solid fa-calendar">2017 - 2018</i>
+                                    <i class="fa-solid fa-calendar"> 2017 - 2018</i>
                                 </div>
                             </div>
 
@@ -279,7 +281,7 @@
                                 <h3 class="experience_title">BAC ES</h3>
                                 <span class="experience_subtitle">Lycée Christophe Colomb</span>
                                 <div class="experience_calendar">
-                                    <i class="fa-solid fa-calendar">2017</i>
+                                    <i class="fa-solid fa-calendar"> 2017</i>
                                 </div>
                             </div>
                         </div>
@@ -293,7 +295,7 @@
                                 <h3 class="experience_title">Stage Développeur Informatique</h3>
                                 <span class="experience_subtitle">Paris</span>
                                 <div class="experience_calendar">
-                                    <i class="fa-solid fa-calendar">2022 (6 semaine)</i>
+                                    <i class="fa-solid fa-calendar"> 2022 (6 semaine)</i>
                                 </div>
                             </div>
 
@@ -316,7 +318,7 @@
                                 <h3 class="experience_title">Agent Traitement de colis</h3>
                                 <span class="experience_subtitle">La Poste</span>
                                 <div class="experience_calendar">
-                                    <i class="fa-solid fa-calendar">2021</i>
+                                    <i class="fa-solid fa-calendar"> 2021</i>
                                 </div>
                             </div>
 
@@ -331,8 +333,8 @@
 
             <!-- =============== Projets ===============-->
         <section class="projet section" id="projets">
-            <h2 class="section_title">Portfolio</h2>
-            <span class="section_subtitle">Projets</span>
+            <h2 class="section_title">Projets</h2>
+            <span class="section_subtitle">Travaux effectués</span>
             <div class="projet_container container">
                 <div>
                 <!-- ========= Projet 1 =========-->
@@ -366,7 +368,7 @@
 
         </section>
 
-            <!-- =============== Projets ===============-->
+            <!-- =============== Contact ===============-->
         <section class="contact section" id="contact">
             <h2 class="section_title">Contact Me</h2>
             <span class="section_subtitle"></span>
@@ -450,16 +452,20 @@
                         <a href="#experience" class="footer_link">Expérience</a>
                     </li>
                     <li>
-                        <a href="#projet" class="footer_link">Projets</a>
+                        <a href="#projets" class="footer_link">Projets</a>
                     </li>
                     <li>
                         <a href="#contact" class="footer_link">Contactez-moi</a>
                     </li>
                 </ul>
-                
             </div>
+            <p class="footer_copy">&#169; Portfolio. All right reserved</p>
         </div>
     </footer>
+        <!-- ========================= SCROLL UP =========================-->
+    <a href="#home" class="scrollup" id="scroll-up">
+        <i class="fa-solid fa-arrow-up scrollup_icon"></i>
+    </a>
     <script src="./js/app.js"></script>
 </body>
 </html>
