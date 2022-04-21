@@ -333,7 +333,7 @@ header{
 
 .home_subtitle{
     font-size: var(--h3-font-size);
-    color: var(--text-color);
+    color: var(--first-color);
     font-weight: var(--font-medium);
     margin-bottom: 0.75rem;
 }
