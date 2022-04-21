@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 html{ 
-    font-size: 62.5%;
+    font-size: 65.5%;
     scroll-behavior: smooth;
 }
 body{
@@ -85,9 +85,9 @@ h1,h2,h3,h4{
             --h1-font-size: 2.25rem;
             --h2-font-size: 1.5rem;
             --h3-font-size: 1.25rem;
-            --normal-font-size: 1rem;
-            --small-font-size: .875rem;
-            --smaller-font-size: .813rem;
+            --normal-font-size: 1.1rem;
+            --small-font-size: .975rem;
+            --smaller-font-size: .913rem;
         }
     }
 
@@ -229,7 +229,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: var(--small-font-size);
+    font-size: 1.3rem;
     color: var(--title-color);
     font-weight: var(--font-medium);
     transition: 0.2s;
@@ -315,6 +315,7 @@ header{
 }
 
 .home_blob-img:hover{
+    /* Effet de zoom*/
     transform: scale(1.1);
     transition: .4s;
 }
@@ -587,6 +588,7 @@ header{
     width: 265px;
     border-radius: 2rem;
     justify-self: center;
+    margin-top: 1rem;
 }
 .projet_img:hover{
     transform: scale(1.1);
@@ -911,6 +913,12 @@ header{
     .main,
     .footer_container{
         padding: 0;
+    }
+    .container{
+        max-width: 65%;
+    }
+    nav{
+        max-width: 80%;
     }
     .home_blob{
         width: 320px;
