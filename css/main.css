@@ -38,7 +38,7 @@ h1,h2,h3,h4{
 
 
 :root{
-    --header-height: 3rem;
+    --header-height: 4rem;
         /*========== Z INDEX ==========*/
     --z-tooltip: 10;
     --z-fixed: 100;
@@ -516,19 +516,37 @@ header{
     cursor: pointer;
 }
 
+
 .experience_button:hover{
     color: var(--first-color);
 }
 
 .experience_icon{
+    display: flex;
+    font-size: 1.8rem;
+    color: var(--first-color);
+}
+
+.experience_icon-2{
     font-size: 1.8rem;
     margin-right: .25rem;
+    color: rgb(27, 102, 213);
 }
 
 .experience_data{
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
     column-gap: 1.5rem;
+}
+
+.experience_data:nth-child(1){
+    text-align: right;
+}
+.experience_data:nth-child(3){
+    text-align: right;
+}
+.experience_data:nth-child(5){
+    text-align: right;
 }
 
 .experience_title{
@@ -551,29 +569,44 @@ header{
     display: inline-block;
     width: 13px;
     height: 13px;
-    border-color: var(--first-color);
-    border-radius: 50%;
+    background-color: rgb(86, 82, 82);
+    border-radius: 30%;
+}
+.rounder_work{
+    background-color: rgb(27, 102, 213);
+}
+.rounder_education{
+    background-color: var(--first-color);
 }
 
 .experience_line{
     display: block;
-    width: 1px;
+    width: 0.5px;
     height: 100%;
-    border-color: var(--first-color);
+    background-color: rgb(86, 82, 82);
     transform: translate(6px, -7px);
 }
 
-.experience[data-content]{
-    display: none;
+.experience [data-content]{
+    display: block;
 }
 
-.experience_active[data-content]{
-    display: block;
+.experience_active [data-content]{
+    display: none;
 }
 
 .experience_button.experience_active{
     color: var(--first-color);
 }
+
+.work>.experience_calendar{
+    color: rgb(27, 102, 213);
+}
+
+.education>.experience_calendar{
+    color: var(--first-color);
+}
+
 
     /*============== PROJET ==============*/
 .projet_container{
