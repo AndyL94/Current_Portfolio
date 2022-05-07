@@ -1,26 +1,26 @@
 document.addEventListener("DOMContentLoaded", e => {
 
-    /*============== MENU SHOW AND HIDDEN ==============*/
+    /*============== Montrer / Cacher l'icône menu ==============*/
     const navMenu = document.getElementById('nav-menu'),
           navToggle = document.getElementById('nav-toggle'),
           navClose = document.getElementById('nav-close');
 
     /*====== MENU SHOW  ======*/
-    /* Validate if constant exists */
+
     if (navToggle) {
         navToggle.addEventListener('click', () => {
             navMenu.classList.add('show-menu');
         });
     }
     /*====== MENU HIDDEN  ======*/
-    /* Validate if constant exists */
+
     if (navClose) {
         navClose.addEventListener('click', () => {
             navMenu.classList.remove('show-menu');
         });
     }
 
-    /*============== REMOVE MENU MOBILE ==============*/
+    /*============== Supprimer MENU MOBILE ==============*/
     const navLink = document.querySelectorAll('.nav_link');
 
     function linkAction() {
@@ -30,45 +30,7 @@ document.addEventListener("DOMContentLoaded", e => {
     }
     navLink.forEach(n => n.addEventListener('click', linkAction));
 
-    /*============== ACCORDION SKILLS ==============*/
-    const skillsContent = document.getElementsByClassName('skills_content'),
-          skillsHeader = document.querySelectorAll('.skills_header');
-
-    function toggleSkills() {
-        let itemClass = this.parentNode.className;
-
-        for (i = 0; i < skillsContent.length; i++) {
-            skillsContent[i].className = 'skills_content skills_close';
-        }
-        if (itemClass === 'skills_content skills_close') {
-            this.parentNode.className = 'skills_content skills_open';
-        }
-    }
-    skillsHeader.forEach(el => {
-        el.addEventListener('click', toggleSkills);
-    });
-
-    /*============== EXPERIENCE TABS ==============*/
-    const tabs = document.querySelectorAll('[data-target]'),
-          tabContents = document.querySelectorAll('[data-content]');
-
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const target = document.querySelector(tab.dataset.target);
-
-            tabContents.forEach(tabContent => {
-                tabContent.classList.remove('experience_active');
-            });
-            target.classList.add('experience_active');
-
-            tabs.forEach(tab => {
-                tab.classList.remove('experience_active');
-            });
-            tab.classList.add('experience_active');
-        });
-    });
-
-    /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+    /*==================== SCROLL SECTIONS ====================*/
     const sections = document.querySelectorAll('section[id]');
 
     function scrollActive() {
@@ -88,49 +50,72 @@ document.addEventListener("DOMContentLoaded", e => {
     }
     window.addEventListener('scroll', scrollActive);
 
-    /*==================== CHANGE BACKGROUND HEADER ====================*/
+    /*==================== Changer le fond du header  ====================*/
     function scrollHeader() {
         const nav = document.getElementById('header');
-        // When the scroll is greater than 80 viewport height, add the scroll-header class to the header tag
+
         if (this.scrollY >= 80) nav.classList.add('scroll-header');else nav.classList.remove('scroll-header');
     }
     window.addEventListener('scroll', scrollHeader);
 
-    /*==================== SHOW SCROLL UP ====================*/
+    /*==================== Montrer SCROLL UP ====================*/
     function scrollUp() {
         const scrollUp = document.getElementById('scroll-up');
-        // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
         if (this.scrollY >= 560) scrollUp.classList.add('show-scroll');else scrollUp.classList.remove('show-scroll');
     }
     window.addEventListener('scroll', scrollUp);
 
-    /*==================== DARK LIGHT THEME ====================*/
+    /*==================== Mode Sombre ====================*/
     const themeButton = document.getElementById('theme-button');
     const darkTheme = 'dark-theme';
     const iconTheme = 'fa-sun';
 
-    // Previously selected topic (if user selected)
     const selectedTheme = localStorage.getItem('selected-theme');
     const selectedIcon = localStorage.getItem('selected-icon');
 
-    // We obtain the current theme that the interface has by validating the dark-theme class
     const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
     const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'fa-moon' : 'fa-sun';
 
-    // We validate if the user previously chose a topic
     if (selectedTheme) {
-        // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+
         document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
         themeButton.classList[selectedIcon === 'fa-moon' ? 'add' : 'remove'](iconTheme);
     }
 
-    // Activate / deactivate the theme manually with the button
     themeButton.addEventListener('click', () => {
-        // Add or remove the dark / icon theme
+
         document.body.classList.toggle(darkTheme);
         themeButton.classList.toggle(iconTheme);
-        // We save the theme and the current icon that the user chose
+
         localStorage.setItem('selected-theme', getCurrentTheme());
         localStorage.setItem('selected-icon', getCurrentIcon());
+    });
+
+    /*==================== Formulaire ====================*/
+    const formulaire = {
+        name: document.getElementsByName("nom")[0],
+        email: document.getElementsByName("email")[0],
+        projet: document.getElementsByName("projet")[0],
+        message: document.getElementsByName("message")[0],
+        btn: document.getElementById('submit'),
+        data: [],
+
+        send() {
+            if (this.name.value && this.email.value && this.projet.value && this.message.value) {
+                console.log(`Nom : ${this.name.value} 
+Email : ${this.email.value}
+Projet : ${this.projet.value}
+Message : ${this.message.value}`);
+                formulaire.data.push(this.name.value, this.email.value, this.projet.value, this.message.value);
+                console.table(formulaire.data);
+                localStorage.setItem('User', JSON.stringify(formulaire.data));
+                alert('Formulaire envoyé');
+            }
+        }
+    };
+
+    formulaire.btn.addEventListener("click", e => {
+        e.preventDefault();
+        formulaire.send();
     });
 });
