@@ -726,6 +726,9 @@ header{
         width: 30rem;
         margin: auto 0px 20px -20px;
     }
+    .experience_data{
+        column-gap: 0;
+    }
 }
 @media screen and (max-width: 390px) {
     .container{
@@ -747,6 +750,7 @@ header{
     
     .experience_data{
         gap: .5rem;
+        column-gap: 0;
     }
 }
 
