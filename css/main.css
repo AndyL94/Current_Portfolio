@@ -56,7 +56,7 @@ h1,h2,h3,h4{
     --scrollbar: rgb(186, 186, 201);
     --scrollbar-thumb: rgb(199, 9, 66);
     --container-color: #fff;
-    --placeholder: #14141590;
+    --placeholder: #010101fe;
     --shadow-1: 10px 10px 19px rgb(211, 211, 221), -10px -10px 19px rgb(210, 210, 223);
     --shadow-2: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
     --background-color-1: linear-gradient(145deg, rgb(254 254 254), rgb(251 251 251));
@@ -69,7 +69,7 @@ h1,h2,h3,h4{
     --h1-font-size: 1.8rem;
     --h2-font-size: 1.50rem;
     --h3-font-size: 1.4rem;
-    --normal-font-size: 1.3rem;
+    --normal-font-size: 1.4rem;
     --small-font-size: 1.2rem;
     --smaller-font-size: .9rem;
     
@@ -94,13 +94,13 @@ h1,h2,h3,h4{
 
     /*============== Variable Mode Sombre ==============*/
 body.dark-theme{
-    --first-color: rgb(255, 1, 79);
-    --first-color-alt: rgb(240, 25, 90);
-    --first-color-lighter: rgb(233, 177, 194);
+    --first-color: rgb(255, 255, 255);
+    --first-color-alt: rgb(255, 255, 255);
+    --first-color-lighter: rgb(245, 245, 245);
     --title-color: rgb(225, 229, 235);
     --text-color: rgb(224, 228, 235);
     --text-color-light: rgb(173, 181, 190);
-    --input-color: rgb(240, 238, 252);
+    --input-color: rgb(255, 255, 255);
     --body-color: rgb(33, 36, 40);
     --footer-bg: rgb(5, 5, 5);
     --scrollbar: rgb(30, 30, 36);
@@ -362,7 +362,7 @@ header{
 .button{
     display: inline-block;
     background-color: var(--first-color);
-    color: #fff;
+    color: var(--body-color);
     padding: 1rem;
     border-radius: .5rem;
     font-weight: var(--font-medium);
@@ -445,7 +445,7 @@ header{
 
 .experience_icon-2{
     font-size: 1.8rem;
-    color: rgb(27, 102, 213);
+    color: var(--first-color);
 }
 .experience_icon::before{
     margin-right: 0.7rem;
@@ -493,7 +493,7 @@ header{
     border-radius: 30%;
 }
 .rounder_work{
-    background-color: rgb(27, 102, 213);
+    background-color: var(--first-color);
 }
 .rounder_education{
     background-color: var(--first-color);
@@ -520,7 +520,7 @@ header{
 }
 
 .work>.experience_calendar{
-    color: rgb(27, 102, 213);
+    color: var(--first-color);
 }
 
 .education>.experience_calendar{
