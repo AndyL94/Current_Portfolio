@@ -45,21 +45,21 @@ h1,h2,h3,h4{
     --z-modal: 1000;
 
         /*========== COLORS ==========*/
-    --first-color: rgb(255, 1, 79);
+    --first-color: rgb(16, 15, 16);
     --first-color-alt: rgb(240, 25, 90);
-    --first-color-lighter: rgb(233, 177, 194);
-    --title-color: rgb(88, 90, 92);
+    --first-color-lighter: rgb(255, 255, 255);
+    --title-color: rgb(44, 45, 46);
     --text-color: rgb(55, 56, 57);
-    --text-color-light: rgb(130, 139, 148);
+    --text-color-light: rgb(1, 1, 1);
     --input-color: rgb(240, 238, 252);
-    --body-color: rgb(225, 225, 236);
+    --body-color: rgb(255, 255, 255);
     --scrollbar: rgb(186, 186, 201);
     --scrollbar-thumb: rgb(199, 9, 66);
     --container-color: #fff;
     --placeholder: #14141590;
     --shadow-1: 10px 10px 19px rgb(211, 211, 221), -10px -10px 19px rgb(210, 210, 223);
     --shadow-2: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
-    --background-color-1: linear-gradient(145deg, rgb(225, 225, 236), rgb(225, 225, 236));
+    --background-color-1: linear-gradient(145deg, rgb(254 254 254), rgb(251 251 251));
     --background-color-2: #212428;
 
         /*========== FONT AND TYPOGRAPHY ==========*/
@@ -102,7 +102,7 @@ body.dark-theme{
     --text-color-light: rgb(173, 181, 190);
     --input-color: rgb(240, 238, 252);
     --body-color: rgb(33, 36, 40);
-    --footer-bg: rgb(199, 9, 66);
+    --footer-bg: rgb(5, 5, 5);
     --scrollbar: rgb(30, 30, 36);
     --scrollbar-thumb: rgb(199, 9, 66);
     --placeholder: #080808;
@@ -623,7 +623,7 @@ header{
 }
 
 .footer_bg{
-    background-color: rgb(199, 9, 66);
+    background-color: #080808;
     padding: 2rem 0 3rem;
 }
 
@@ -847,6 +847,7 @@ header{
         grid-template-columns: repeat(2, 1fr);
     }
     .footer_bg{
+        background-color: #080808;
         padding: 3rem 0 3.5rem;
     }
     .footer_links{
