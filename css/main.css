@@ -95,7 +95,7 @@ h1,h2,h3,h4{
     /*============== Variable Mode Sombre ==============*/
 body.dark-theme{
     --first-color: rgb(255, 255, 255);
-    --first-color-alt: rgb(255, 255, 255);
+    --first-color-alt: rgb(240, 25, 90);
     --first-color-lighter: rgb(245, 245, 245);
     --title-color: rgb(225, 229, 235);
     --text-color: rgb(224, 228, 235);
@@ -341,6 +341,7 @@ header{
 
 .home_scroll-button:hover{
     transform: translateY(.25rem);
+    color: var(--first-color-alt);
 }
 
 .home_scroll-mouse{
@@ -349,7 +350,6 @@ header{
 
 .home_scroll-name{
     font-size: var(--small-font-size);
-    color: var(--title-color);
     font-weight: var(--font-medium);
     margin-left: 0.25rem;
 }
