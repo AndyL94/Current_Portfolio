@@ -729,6 +729,12 @@ header{
     .experience_data{
         column-gap: 0;
     }
+    .work{
+        margin-right: 0.8rem;
+    }
+    .education:nth-child(1){
+        margin-left: -1.5rem;
+    }
 }
 @media screen and (max-width: 390px) {
     .container{
