@@ -733,7 +733,11 @@ header{
         margin-right: 0.8rem;
     }
     .education:nth-child(1){
-        margin-left: -1.5rem;
+        margin-left: -2rem;
+        margin-right: 0.8rem;
+    }
+    .education:nth-child(3){
+        margin-left: 0.8rem;
     }
 }
 @media screen and (max-width: 390px) {
