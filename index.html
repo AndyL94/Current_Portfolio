@@ -51,7 +51,7 @@
             </div>
             <div class="nav_btns">
                 <!-- Theme change button -->
-                <i class="fa-solid fa-moon change-theme" id="theme-button"></i>
+                <i class="fa-solid fa-moon change-theme" tabindex=0 aria-hidden="true" id="theme-button"></i>
                 <div class="nav_toggle" id="nav-toggle">
                     <i class="fa-solid fa-bars"></i>
                 </div>
@@ -119,10 +119,10 @@
             <span class="section_subtitle">Langages</span>
             <div class="languages_container container languages">
                 <div class="languages_content">
-                   <figure><img class="logos" src="./asset/html.png" alt="logo html" title="Logo HTML"></figure>
-                    <figure><img class="logos" src="./asset/css.png" alt="logo css" title="Logo CSS"></figure>
-                    <figure><img class="logos" src="./asset/js.png" alt="logo javascript" title="Logo JS"></figure>
-                    <figure><img class="logos" src="./asset/sql.png" alt="logo sql" title="Logo SQL"></figure>
+                   <img class="logos" src="./asset/html.png" alt="logo html" title="Logo HTML">
+                    <img class="logos" src="./asset/css.png" alt="logo css" title="Logo CSS">
+                    <img class="logos" src="./asset/js.png" alt="logo javascript" title="Logo JS">
+                    <img class="logos" src="./asset/sql.png" alt="logo sql" title="Logo SQL">
                 </div>
             </div>
         </section>
@@ -332,20 +332,20 @@
                     <div class="contact_inputs grid">
                         <div class="contact_content">
                             <label class="contact_label">Name</label>
-                            <input type="text" name="nom" class="contact_input" placeholder="Votre nom">
+                            <input type="text" name="nom" class="contact_input" aria-hidden="true" placeholder="Votre nom">
                         </div>
                         <div class="contact_content">
                             <label class="contact_label">Email</label>
-                            <input type="email" name="email" class="contact_input" placeholder="Votre adresse mail">
+                            <input type="email" name="email" class="contact_input" aria-hidden="true" placeholder="Votre adresse mail">
                         </div>
                     </div>
                     <div class="contact_content">
                         <label class="contact_label">Projet</label>
-                        <input type="text" name="projet" class="contact_input" placeholder="Votre projet">
+                        <input type="text" name="projet" class="contact_input" aria-hidden="true" placeholder="Votre projet">
                     </div>
                     <div class="contact_content">
                         <label class="contact_label">Message</label>
-                        <textarea name="message" cols="1" rows="7" class="contact_input" placeholder="Commentaires..."></textarea>
+                        <textarea name="message" cols="1" rows="7" class="contact_input" aria-hidden="true" placeholder="Commentaires..."></textarea>
                     </div>
 
                     <div>
