@@ -58,6 +58,7 @@ h1,h2,h3,h4{
     --container-color: #fff;
     --placeholder: #010101fe;
     --input-background: #fff;
+    --footer-bg: #080808;
     --shadow-1: 10px 10px 19px rgb(211, 211, 221), -10px -10px 19px rgb(210, 210, 223);
     --shadow-2: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
     --background-color-1: linear-gradient(145deg, rgb(254 254 254), rgb(251 251 251));
@@ -108,6 +109,7 @@ body.dark-theme{
     --scrollbar-thumb: rgb(199, 9, 66);
     --placeholder: #fff;
     --input-background: #383a3c;
+    --footer-bg: #212020;
     --shadow-1: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
     --shadow-2: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
     --background-color-1: linear-gradient(145deg, #1e2024, #23272b);
@@ -626,7 +628,7 @@ header{
 }
 
 .footer_bg{
-    background-color: #080808;
+    background-color: var(--footer-bg);
     padding: 2rem 0 3rem;
 }
 
@@ -860,7 +862,6 @@ header{
         grid-template-columns: repeat(2, 1fr);
     }
     .footer_bg{
-        background-color: #080808;
         padding: 3rem 0 3.5rem;
     }
     .footer_links{
