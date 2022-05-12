@@ -495,6 +495,7 @@ header{
     height: 13px;
     background-color: rgb(86, 82, 82);
     border-radius: 30%;
+    position: relative;
 }
 .rounder_work{
     background-color: var(--first-color);
@@ -505,7 +506,7 @@ header{
 
 .experience_line{
     display: block;
-    width: 0.5px;
+    width: 1.5px;
     height: 100%;
     background-color: rgb(86, 82, 82);
     transform: translate(6px, -7px);
