@@ -47,7 +47,7 @@ h1,h2,h3,h4{
         /*========== COLORS ==========*/
     --first-color: rgb(16, 15, 16);
     --first-color-alt: rgb(240, 25, 90);
-    --first-color-lighter: rgb(255, 255, 255);
+    --first-color-lighter: #d4d4d4;
     --title-color: rgb(44, 45, 46);
     --text-color: rgb(55, 56, 57);
     --text-color-light: rgb(1, 1, 1);
@@ -57,6 +57,7 @@ h1,h2,h3,h4{
     --scrollbar-thumb: rgb(199, 9, 66);
     --container-color: #fff;
     --placeholder: #010101fe;
+    --skills_bar: #d4d4d4;
     --input-background: #fff;
     --footer-bg: #080808;
     --shadow-1: 10px 10px 19px rgb(211, 211, 221), -10px -10px 19px rgb(210, 210, 223);
@@ -108,6 +109,7 @@ body.dark-theme{
     --scrollbar: rgb(30, 30, 36);
     --scrollbar-thumb: rgb(199, 9, 66);
     --placeholder: #fff;
+    --skills_bar: rgb(81 81 81);
     --input-background: #383a3c;
     --footer-bg: #212020;
     --shadow-1: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
@@ -160,8 +162,8 @@ section{
     margin-right: 1.5rem;
 }
 
-.languages_container,
 .skills_container,
+.skills2_container,
 .experience_container,
 .projet_container,
 .contact_container{
@@ -387,23 +389,23 @@ header{
     align-items: center;
 }
 
-    /*============== SKILLS ==============*/
+    /*============== SKILLS2 ==============*/
 
-.skills_content{
+.skills2_content{
     width: 105rem;
     display: flex;
     justify-content: space-around;
     margin: 45px auto 0;
 }
-.skills_content h2{
+.skills2_content h2{
     text-align: center;
 
 }
-.skills_content p{
+.skills2_content p{
     text-align: center;
     margin-top: 25px;
 }
-.skills_box{
+.skills2_box{
     width: 300px;
     margin: 30px;
     padding: 23px;
@@ -413,15 +415,108 @@ header{
 .responsive p{
     margin-top: 30px;
 }
-/*============== LANGAGES ==============*/
-.languages_content{
+
+/*============== SKILLS ==============*/
+.skills_container{
+    row-gap: 0;
+}
+
+.skills_header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+}
+
+.skills_icon,
+.skills_arrow{
+    font-size: 2rem;
+    color: var(--first-color);
+}
+
+.skills_icon{
+    margin-right: 0.75rem;
+}
+
+.skills_title{
+    font-size: var(--h3-font-size);
+}
+
+.skills_subtitle{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.skills_arrow{
+    margin-left: auto;
+    transition: .4s;
+}
+
+.skills_list{
+    row-gap: 1.5rem;
+    padding-left: 2.7rem;
+}
+
+.skills_title{
     display: flex;
     justify-content: space-between;
-    margin: 65px;
+    margin-bottom: .5rem;
 }
-.logos{
-    width: 100px;
-    height: 100px;
+
+.skills_name{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.skills_bar,
+.skills_percentage{
+    height: 5px;
+    border-radius: .25rem;
+}
+
+.skills_bar{
+    background-color: var(--skills_bar);
+}
+
+.skills_percentage{
+    display: block;
+    background-color: var(--first-color);
+}
+
+.skills_html{
+    width: 70%;
+}
+
+.skills_css{
+    width: 60%;
+}
+
+.skills_js{
+    width: 50%;
+}
+
+.skills_java{
+    width: 50%;
+}
+
+.skills_mysql{
+    width: 60%;
+}
+
+.skills_close .skills_list{
+    height: 0;
+    transition: .1s;
+    overflow: hidden;
+}
+
+.skills_open .skills_list{
+    height: max-content;
+    transition: .1s;
+    margin-bottom: 2.5rem;
+}
+
+.skills_open .skills_arrow{
+    transform: rotate(-180deg);
 }
 
     /*============== Expérience ==============*/
@@ -763,26 +858,16 @@ header{
     .home_content{
         grid-template-columns: .25fr 3fr;
     }
-    
+    .skills_title{
+        font-size: var(--normal-font-size);
+    }
     .experience_data{
         gap: .5rem;
         column-gap: 0;
     }
 }
 
-@media screen and (min-width: 768px) {
-    
-}
-@media screen and (max-width: 768px) {
-    .languages_content{
-        flex-direction: column;
-        margin: 0px;
-        align-items: center;
-    }
-    .logos{
-        margin-top: 50px;
-    }
-}
+
 @media screen and (min-width: 768px) {
     .container{
         margin-left: auto;
@@ -882,7 +967,7 @@ header{
 }
 
 @media screen and (max-width: 1024px) {
-    .skills_content{
+    .skills2_content{
         width: auto;
         flex-direction: column;
         align-items: center;

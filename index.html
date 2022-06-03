@@ -7,9 +7,9 @@
     <meta name="description" content="LOUIS Andy Portfolio">
     <title>Portfolio</title>
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -27,7 +27,7 @@
                         </a>
                     </li>
                     <li class="nav_item">
-                        <a href="#languages" class="nav_link">
+                        <a href="#skills" class="nav_link">
                             <i class="fa-solid fa-laptop nav_icon"></i> Compétence
                         </a>
                     </li>
@@ -69,7 +69,8 @@
                     <div class="home_data">
                         <h2 class="home_title">Bonjour, je m'appelle Andy LOUIS</h2>
                         <h3 class="home_subtitle">Développeur Informatique</h3>
-                        <p class="home_description">Étudiant en BTS SIO (1ère année) axé sur le développement web et le développement d'Application mobile</p>
+                        <p class="home_description">Étudiant en BTS SIO (2ème année) axé sur le développement web et le développement d'Application mobile. <br>
+                                                    Je suis actuellement à la recherche d’une entreprise dans laquelle je pourrai effectuer une alternance dans le cadre d'un BTS SIO (Bac +2).</p>
                         <div class="contacts">
                             <a href="#contact" class="button button-flex">
                             Contactez-moi <i class="fa-solid fa-phone button_icon"></i>
@@ -95,34 +96,104 @@
             </div>
         </section>
         
-        <div class="skills_content">
-            <div class="skills_box">
+        <div class="skills2_content">
+            <div class="skills2_box">
                 <h2>Développement Web</h2>
                 <p>Conçevoir des sites sur mesure ou adapte des solutions techniques existantes en fonction du projet et de la demande du client.</p>
             </div>
-            <div class="skills_box responsive">
+            <div class="skills2_box responsive">
                  <h2>Responsive</h2>
                  <p>Afficher tous les éléments d’une page de manière clair quel que soit le format.</p>
              </div>
-             <div class="skills_box">
+             <div class="skills2_box">
                  <h2>Développement d'application</h2>
                  <p>Participe au développement et à la maintenance des applications informatiques, en assurant l'analyse fonctionnelle, la conception technique, le codage...</p>
              </div>
-             <div class="skills_box">
+             <div class="skills2_box">
                  <h2>Administrateur de base de données</h2>
                  <p>Création, maintenance, optimisation et la sécurité des bases de données</p>
              </div>
          </div>
             <!-- =============== Compétences ===============-->
-        <section class="languages section" id="languages">
+        <section class="skills section" id="skills">
             <h2 class="section_title">Compétences</h2>
             <span class="section_subtitle">Langages</span>
-            <div class="languages_container container languages">
-                <div class="languages_content">
-                   <img class="logos" src="./asset/html.png" alt="logo html" title="Logo HTML">
-                    <img class="logos" src="./asset/css.png" alt="logo css" title="Logo CSS">
-                    <img class="logos" src="./asset/js.png" alt="logo javascript" title="Logo JS">
-                    <img class="logos" src="./asset/sql.png" alt="logo sql" title="Logo SQL">
+            <div class="skills_container container grid">
+                <div>
+                    <!-- ========= SKILLS 1 =========-->
+                    <div class="skills_content skills_open">
+                        <div class="skills_header">
+                            <i class="fa-solid fa-code skills_icon"></i>
+                            <div>
+                                <h2 class="skills_title">Frontend Developpeur</h2>
+                            </div>
+                            <i class="fa-solid fa-angle-down skills_arrow"></i>
+                        </div>
+                        <div class="skills_list grid">
+                            <div class="skills_data">
+                                <div class="skills_title">
+                                    <h3 class="skills_name">HTML</h3>
+                                    <span class="skills_number">70%</span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage skills_html"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills_data">
+                                <div class="skills_title">
+                                    <h3 class="skills_name">CSS</h3>
+                                    <span class="skills_number">60%</span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage skills_css"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills_data">
+                                <div class="skills_title">
+                                    <h3 class="skills_name">JavaScript</h3>
+                                    <span class="skills_number">50%</span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage skills_js"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========= SKILLS 2 =========-->
+                    <div class="skills_content skills_close">
+                        <div class="skills_header">
+                            <i class="fa-solid fa-server skills_icon"></i>
+
+                            <div>
+                                <h2 class="skills_title">Backend Developpeur</h2>
+                            </div>
+                            <i class="fa-solid fa-angle-down skills_arrow"></i>
+                        </div>
+                        <div class="skills_list grid">
+                            <div class="skills_data">
+                                <div class="skills_title">
+                                    <h3 class="skills_name">Java</h3>
+                                    <span class="skills_number">50%</span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage skills_java"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills_data">
+                                <div class="skills_title">
+                                    <h3 class="skills_name">MySQL</h3>
+                                    <span class="skills_number">60%</span>
+                                </div>
+                                <div class="skills_bar">
+                                    <span class="skills_percentage skills_mysql"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -270,26 +341,16 @@
                         <img src="./asset/streaming.png" alt="" class="projet_img">
 
                         <div class="projet_data">
-                            <h3 class="projet_title">Site Streaming</h3>
-                            <p class="projet_description"> Bienvenue sur mon site Full Streaming, Un site ou vous pouvez trouver tous les films et séries en streaming.</p>
-                            <a href="http://andyl94.github.io/Projet_Streaming/" class="button button-flex button-small projet_button">Demo
+                            <h3 class="projet_title">Live Streaming</h3>
+                            <p class="projet_description"> Ceci est un site Streaming inspiré de sites de streaming quelconque comme on peut en trouver partout sur Internet. Elle contient une page d'accueil et une page de film avec un lecteur vidéo.</p>
+                            <a href="https://andyl94.github.io/Live_Streaming/" class="button button-flex button-small projet_button">Demo
                                 <i class="fa-solid fa-arrow-right button_icon"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- ========= Projet 2 =========-->
-                    <div class="projet_content grid">
-                        <img src="./asset/dev2.png" alt="" class="projet_img">
-
-                        <div class="projet_data">
-                            <h3 class="projet_title">Site Streaming</h3>
-                            <p class="projet_description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quod facilis quas nisi</p>
-                            <a href="#" class="button button-flex button-small projet_button">Demo
-                                <i class="fa-solid fa-arrow-right button_icon"></i>
-                            </a>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
 
