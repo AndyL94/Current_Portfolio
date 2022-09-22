@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", e => {
     var i = input.length;
     while (i--) {
         input[i].setAttribute("aria-required", "true");
-    }
+    } 
 
     /*============== Montrer / Cacher l'icône menu ==============*/
     const navMenu = document.getElementById('nav-menu'),
