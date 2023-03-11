@@ -165,7 +165,7 @@ section{
 .skills_container,
 .skills2_container,
 .experience_container,
-.projet_container,
+.project_container,
 .contact_container{
     background-color: var(--background-color-1);
     border-radius: 2rem;
@@ -419,23 +419,37 @@ header{
 /*============== SKILLS ==============*/
 .skills_container{
     row-gap: 0;
+    background-color: #fff;
+    margin: auto;
+    max-width: 65%;
 }
 
-.skills_header{
-    display: flex;
-    align-items: center;
-    margin-bottom: 2.5rem;
-    cursor: pointer;
+.skills_container ul{
+    display: grid;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4;
+    text-align: center;
 }
 
-.skills_icon,
-.skills_arrow{
-    font-size: 2rem;
-    color: var(--first-color);
+.skills_container .first{
+    display: grid;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4;
+    text-align: center;
 }
 
-.skills_icon{
-    margin-right: 0.75rem;
+.skills_container .second{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4;
+}
+
+
+.skills_container ul img{
+    height: 100px;
 }
 
 .skills_title{
@@ -445,78 +459,6 @@ header{
 .skills_subtitle{
     font-size: var(--small-font-size);
     color: var(--text-color-light);
-}
-
-.skills_arrow{
-    margin-left: auto;
-    transition: .4s;
-}
-
-.skills_list{
-    row-gap: 1.5rem;
-    padding-left: 2.7rem;
-}
-
-.skills_title{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: .5rem;
-}
-
-.skills_name{
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
-}
-
-.skills_bar,
-.skills_percentage{
-    height: 5px;
-    border-radius: .25rem;
-}
-
-.skills_bar{
-    background-color: var(--skills_bar);
-}
-
-.skills_percentage{
-    display: block;
-    background-color: var(--first-color);
-}
-
-.skills_html{
-    width: 70%;
-}
-
-.skills_css{
-    width: 60%;
-}
-
-.skills_js{
-    width: 50%;
-}
-
-.skills_java{
-    width: 50%;
-}
-
-.skills_mysql{
-    width: 60%;
-}
-
-.skills_close .skills_list{
-    height: 0;
-    transition: .1s;
-    overflow: hidden;
-}
-
-.skills_open .skills_list{
-    height: max-content;
-    transition: .1s;
-    margin-bottom: 2.5rem;
-}
-
-.skills_open .skills_arrow{
-    transform: rotate(-180deg);
 }
 
     /*============== Expérience ==============*/
@@ -628,37 +570,39 @@ header{
 }
 
     /*============== PROJET ==============*/
-.projet_container{
-    overflow: initial;
+.project_container{
+    display: flex;
+    flex-direction: row;
 }
 
-.projet_content{
+.project_container div{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    
+}
+
+.project_container figure{
+    margin: 1rem;
+    text-align: center;
+}
+
+.project_content{
     padding: 0 1.5rem;
 }
 
-.projet_img{
-    width: 265px;
-    border-radius: 2rem;
-    justify-self: center;
+.project_img{
+    border-radius: 0.5rem;
     margin-top: 1rem;
+    text-align: center;
 }
-.projet_img:hover{
+.project_img:hover{
     transform: scale(1.1);
     transition: .4s;
 }
 
-
-.projet_title{
-    font-size: var(--h3-font-size);
-    margin-bottom: .5rem;
-}
-
-.projet_description{
-    margin-bottom: .75rem;
-}
-
-.projet_button:hover .button_icon{
-    transform: translateX(.25rem);
+.project_name{
+    text-align: center;
 }
 
     /*============== CONTACT ==============*/
@@ -935,15 +879,13 @@ header{
         grid-template-columns: .6fr;
         justify-content: center;
     }
-    .projet_img{
+    .project_img{
         margin: .5rem;
-        width: 320px;
-        height: 320px;
     }
-    .projet_content{
+    .project_content{
         align-items: center;
     }
-    .projet_content,
+    .project_content,
     .footer_container{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -991,7 +933,7 @@ header{
     .home_social{
         transform: translate(-6rem);
     }
-    .projet_content{
+    .project_content{
         column-gap: 5rem;
     }
 
