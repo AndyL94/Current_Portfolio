@@ -419,7 +419,7 @@ header{
 /*============== SKILLS ==============*/
 .skills_container{
     row-gap: 0;
-    background-color: #fff;
+    background-color: var(--background-color-1);
     margin: auto;
     max-width: 65%;
 }
@@ -596,13 +596,17 @@ header{
     margin-top: 1rem;
     text-align: center;
 }
-.project_img:hover{
-    transform: scale(1.1);
-    transition: .4s;
-}
 
 .project_name{
     text-align: center;
+}
+
+.project_name a{
+    color: var(--title-color);
+}
+
+.project_name a:hover{
+    color: var(--first-color-alt);
 }
 
     /*============== CONTACT ==============*/
