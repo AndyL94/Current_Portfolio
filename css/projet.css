@@ -181,7 +181,6 @@ section{
 header{
     width: 100%;
     position: fixed;
-    bottom: 0;
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
@@ -769,11 +768,15 @@ header{
     justify-content: center;
 }
 
-.p-projet{
+.p-project{
     font-size: medium;
     text-align: center;
+    margin-top: 3rem;
 }
 
+.i-project{
+    margin-top: 3rem;
+}
     /*============== MEDIA QUERIES ==============*/
 @media screen and (max-width: 445px){
     .experience_tabs{
